@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Onis.Domain.Contracts
 {
-    public interface IRepository
+    public interface ICatalogItemRepository
     {
-        Task Actualizar(object obj);
+
     }
 }

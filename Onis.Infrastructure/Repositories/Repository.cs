@@ -9,5 +9,9 @@ namespace Onis.Infrastructure.Repositories
 {
     public class Repository : IRepository
     {
+        public Task Actualizar(object obj)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
