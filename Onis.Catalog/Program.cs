@@ -1,4 +1,6 @@
+using Microsoft.EntityFrameworkCore;
 using Onis.Domain.Contracts;
+using Onis.Infrastructure.DB;
 using Onis.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +12,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 //Beautify this...
+var constring =builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<CatalogDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddTransient<IRepository, Repository>();
 var app = builder.Build();
 
@@ -17,7 +21,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API NAME 1.0.0.0"));
 }
 
 app.UseHttpsRedirection();
