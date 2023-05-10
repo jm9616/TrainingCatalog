@@ -7,5 +7,13 @@ namespace Onis.Catalog.Controllers
     [ApiController]
     public class CatalogItemController : ControllerBase
     {
+        [HttpPost("")]
+        [HttpGet("")]
+
+
+        public CatalogItemController()~
+        {
+
+        }
     }
 }

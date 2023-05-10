@@ -17,6 +17,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\Onis.Infrastructure\Onis.Infrastructure.csproj" />
+		<ProjectReference Include="..\Onis.Transversal\Onis.Transversal.csproj" />
 	</ItemGroup>
 
 </Project>

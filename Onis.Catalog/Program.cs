@@ -34,7 +34,7 @@ try
         app.UseSwaggerUI();
     }
 
-    throw new Exception("Prueba 333");
+    app.UseMiddleware<>(NUESTROCUSTOMERRORHandler);
     app.UseHttpsRedirection();
 
     app.UseAuthorization();
