@@ -11,15 +11,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{4A300EFC-354B-4477-97A9-CB4A3A238D96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onis.Domain", "Onis.Domain\Onis.Domain.csproj", "{DD5811C8-D82B-4F51-9673-398023164A10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Onis.Domain", "Onis.Domain\Onis.Domain.csproj", "{DD5811C8-D82B-4F51-9673-398023164A10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onis.Infrastructure", "Onis.Infrastructure\Onis.Infrastructure.csproj", "{97E36395-6800-470E-82BA-CEAFA38E8790}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Onis.Infrastructure", "Onis.Infrastructure\Onis.Infrastructure.csproj", "{97E36395-6800-470E-82BA-CEAFA38E8790}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{F18ED8A2-A45C-4FF6-95AC-32B60D0D6F44}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Transversal", "Transversal", "{D8077FDA-CDF6-4C11-A1A3-D12AF797A923}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onis.Transversal", "Onis.Transversal\Onis.Transversal.csproj", "{AD93F335-555A-426E-A935-0AD3A50E3660}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Onis.Transversal", "Onis.Transversal\Onis.Transversal.csproj", "{AD93F335-555A-426E-A935-0AD3A50E3660}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onis.Security", "Onis.Security\Onis.Security.csproj", "{75A0AC35-99D1-464F-BFCA-23433AF3576B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{AD93F335-555A-426E-A935-0AD3A50E3660}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD93F335-555A-426E-A935-0AD3A50E3660}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD93F335-555A-426E-A935-0AD3A50E3660}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75A0AC35-99D1-464F-BFCA-23433AF3576B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75A0AC35-99D1-464F-BFCA-23433AF3576B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75A0AC35-99D1-464F-BFCA-23433AF3576B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75A0AC35-99D1-464F-BFCA-23433AF3576B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{97E36395-6800-470E-82BA-CEAFA38E8790} = {4A300EFC-354B-4477-97A9-CB4A3A238D96}
 		{F18ED8A2-A45C-4FF6-95AC-32B60D0D6F44} = {603DC5CA-4C9C-481E-ABEE-3455FD04F92B}
 		{AD93F335-555A-426E-A935-0AD3A50E3660} = {D8077FDA-CDF6-4C11-A1A3-D12AF797A923}
+		{75A0AC35-99D1-464F-BFCA-23433AF3576B} = {F18ED8A2-A45C-4FF6-95AC-32B60D0D6F44}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {005D5FD8-3E4E-4078-ABD7-C0E9E98C5BCD}
