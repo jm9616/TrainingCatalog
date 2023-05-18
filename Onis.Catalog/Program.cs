@@ -1,5 +1,7 @@
 using NLog;
 using NLog.Web;
+using Onis.Catalog.Adapters;
+using AutoMapper;
 using Onis.Domain.Contracts;
 using Onis.Infrastructure.DB;
 using Onis.Infrastructure.Repositories;
@@ -16,6 +18,7 @@ try
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
+    builder.Services.AddAutoMapper(typeof(CatalogItemAdapter));
 
     // NLog: Setup NLog for Dependency injection
     builder.Logging.ClearProviders();
@@ -24,7 +27,6 @@ try
     builder.Host.UseNLog();
 
     //Beautify this...
-    builder.Services.AddTransient<IRepository, Repository>();
     var app = builder.Build();
 
     // Configure the HTTP request pipeline.
@@ -34,7 +36,6 @@ try
         app.UseSwaggerUI();
     }
 
-    app.UseMiddleware<>(NUESTROCUSTOMERRORHandler);
     app.UseHttpsRedirection();
 
     app.UseAuthorization();
