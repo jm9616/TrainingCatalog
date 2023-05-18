@@ -5,6 +5,7 @@ using AutoMapper;
 using Onis.Domain.Contracts;
 using Onis.Infrastructure.DB;
 using Onis.Infrastructure.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 // Early init of NLog to allow startup and exception logging, before host is built
 var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
@@ -25,7 +26,7 @@ try
 
     builder.Logging.AddNLog("nlog.config");
     builder.Host.UseNLog();
-
+    builder.Services.AddDbContext<CatalogDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
     //Beautify this...
     var app = builder.Build();
 
